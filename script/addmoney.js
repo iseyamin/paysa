@@ -8,12 +8,15 @@ document.getElementById('add-money-btn').addEventListener('click',
         const balance=document.getElementById('main-balance').innerText;
         const balancee=parseFloat(balance);
 
-        if(pinn===1234){
+       if(amount && pin){
+         if(pinn===1234){
            const sum=balancee+amountt;
            document.getElementById('main-balance').innerText=sum;
         }
-        else console.log('nl')
+        else alert('wrong pin');
         document.getElementById("pin").value = "";
+       }
+       else alert('fill the field first');
         
     }
 )

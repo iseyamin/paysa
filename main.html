@@ -45,33 +45,62 @@
     </div>
     <!-- box card -->
      <div class="cards grid grid-cols-3 mx-6 gap-2 ">
-        <div class="box border text-center p-4 rounded-sm ">
+        <div id="add-money-box" class="cursor-pointer box border text-center p-4 rounded-sm ">
             <img class="mx-auto" src="assets/opt-1.png" alt="">
             <h1>Add money</h1>
         </div>
-        <div class="box border text-center p-4 rounded-sm">
+        <div id="cash-out-box" class="cursor-pointer box border text-center p-4 rounded-sm">
             <img class="mx-auto" src="assets/opt-2.png" alt="">
             <h1>Cash out</h1>
         </div>
-        <div class="box border text-center p-4 rounded-sm">
+        <div class="box border text-center p-4 rounded-sm cursor-pointer">
             <img class="mx-auto" src="assets/opt-3.png" alt="">
             <h1>Transfer Money</h1>
         </div>
-        <div class="box border text-center p-4 rounded-sm">
+        <div class="box border text-center p-4 rounded-sm cursor-pointer">
             <img class="mx-auto" src="assets/opt-4.png" alt="">
             <h1>Get Bonus</h1>
         </div>
-        <div class="box border text-center p-4 rounded-sm">
+        <div class="box border text-center p-4 rounded-sm cursor-pointer">
             <img class="mx-auto" src="assets/opt-5.png" alt="">
             <h1>Pay Bill</h1>
         </div>
-        <div class="box border text-center p-4 rounded-sm">
+        <div class="box border text-center p-4 rounded-sm cursor-pointer">
             <img class="mx-auto" src="assets/opt-6.png" alt="">
             <h1>Transactions</h1>
         </div>
         
      </div>
-     <section class="">
+     <section id="fun">
+            <a href="#" class="hover-3d my-12 mx-2 cursor-pointer">
+  
+  <!-- content -->
+  <div class="w-80 mx-auto card bg-gradient-to-r from-pink-600 to-purple-600 text-white  ">
+    <div class="card-body">
+      <div class="flex justify-between mb-10">
+        <div class="font-bold">BANK OF PAYSA</div>
+        <div class="text-5xl opacity-10">❁</div>
+      </div>
+      <div class="text-lg mb-4 opacity-40">0210 8820 1150 0222</div>
+      <div class="flex justify-between">
+        <div>
+          <div class="text-xs opacity-20">CARD HOLDER</div>
+          <div>VICTOR VON D.</div>
+        </div>
+        <div>
+          <div class="text-xs opacity-20">EXPIRES</div>
+          <div>29/08</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</a>
+    
+     </section>
+     <!-- cash-in -->
+     <section id="cash-in" class="">
         <h2 class="text-center">Add Money</h2>
         <div class="-mt-6">
    
@@ -98,11 +127,34 @@
     </div>
 </div>
     </section>
+    <!-- cash out -->
+     <section id="cash-out" class="">
+        <h2 class="text-center">Cash Out</h2>
+        <div class="-mt-6">
+   
+    <div class="px-6 ">
+      <div class="card-body">
+        <fieldset class="fieldset">
+           
+          <label class="label font-semibold text-black">Agent Number</label>
+          <input value="" id="account-no" type="text" class="input" placeholder="Enter 11 digit Agent Number" required />
+          <label class="label font-semibold text-black">Amount</label>
+          <input value="" id="amount" type="text" class="input" placeholder="Enter Account Amount" required />
+          <label class="label font-semibold text-black">Pin</label>
+          <input id="pin" type="pin" class="input" placeholder="Enter Pin" required/>
+          <!-- <div><a class="link link-hover">Forgot password?</a></div> -->
+          <button id="add-money-btn" class="btn btn-primary mt-4 rounded-3xl">Withdraw Money</button>
+        </fieldset>
+      </div>
+    </div>
+</div>
+    </section>
 
     </section>
 
     
 <script src="script/addmoney.js"></script>
+<script src="script/toggle.js"></script>
     
 </body>
 </html>
