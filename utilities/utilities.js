@@ -14,3 +14,13 @@ function getConvertedValueById(id){
     return cvaluee;
 
 }
+
+//display function
+function displayStatus(id,status){
+    return document.getElementById(id).style.display=status;
+}
+
+//box bg
+function boxColor(id,color){
+    return document.getElementById(id).style.backgroundColor=color;
+}

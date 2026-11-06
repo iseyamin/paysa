@@ -18,11 +18,12 @@ document.getElementById('add-money-box').addEventListener('click',
 //for cash out
 document.getElementById('cash-out-box').addEventListener('click',
     function(event){
-        document.getElementById('cash-out-box').style.backgroundColor='pink'
-         document.getElementById('add-money-box').style.backgroundColor=''
-        document.getElementById('cash-in').style.display='none';
-        document.getElementById('cash-out').style.display='block';
-         document.getElementById('fun').style.display='none';
+        
+         boxColor('cash-out-box','pink')
+         boxColor('add-money-box','')
+        displayStatus('cash-out',"block");
+        displayStatus('cash-in',"none");
+        displayStatus('fun',"none");
 
     }
 )
