@@ -9,6 +9,13 @@ document.getElementById('cash-out-btn').addEventListener('click',
         const balancee = parseFloat(balance);
         const accountNumber = document.getElementById('cash-out-account-no').value;
 
+         if(amountt>balancee){
+         alert('beda ahammok');
+         document.getElementById('cash-out-pin').value = "";
+         document.getElementById('cash-out-amount').value = "";
+         return;
+      }
+
         if (amount && pin && accountNumber) {
             if (accountNumber.length === 11) {
                 if (pinn === 1234) {

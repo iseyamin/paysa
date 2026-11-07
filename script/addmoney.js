@@ -33,6 +33,14 @@ document.getElementById('add-money-btn').addEventListener('click',
       const balance = getConvertedTextById('main-balance');
       const id = getValueById('account-no');
 
+      if(amount<0){
+         alert('beda fokir');
+         document.getElementById('pin').value = "";
+         document.getElementById('amount').value = "";
+         return;
+      }
+     
+
       if (amount && pin && id) {
          if (id.length === 11) {
             if (pin === 1234) {
