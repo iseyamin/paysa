@@ -1,8 +1,8 @@
 document.getElementById('cash-out-btn').addEventListener('click',
     function (event) {
         event.preventDefault();
-        const amount = document.getElementById('cash-out-amount').value;
-        const amountt = parseFloat(amount);
+        
+        const amountt =getConvertedValueById('cash-out-amount');
         const pin = document.getElementById('cash-out-pin').value;
         const pinn = parseInt(pin);
         const balance = document.getElementById('main-balance').innerText;
@@ -14,6 +14,19 @@ document.getElementById('cash-out-btn').addEventListener('click',
                 if (pinn === 1234) {
                     const sum = balancee - amountt;
                     document.getElementById('main-balance').innerText = sum;
+
+
+                   //add into transaction
+                    const container = document.getElementById('transactions');
+               const p = document.createElement('p');
+               p.innerText = `
+                     withdraw ${amountt} from account: ${accountNumber}
+                      `
+               // console.log(p)
+               container.appendChild(p);
+
+
+
                 }
                 else alert('wrong pin');
                 document.getElementById("cash-out-pin").value = " ";
