@@ -32,6 +32,7 @@ document.getElementById('add-money-btn').addEventListener('click',
       const pin = getConvertedValueById("pin");
       const balance = getConvertedTextById('main-balance');
       const id = getValueById('account-no');
+      const bank=document.getElementById('bank').value;
 
       if(amount<0){
          alert('beda fokir');
@@ -50,13 +51,14 @@ document.getElementById('add-money-btn').addEventListener('click',
 
                //add into transaction
                const container = document.getElementById('transactions');
-               const p = document.createElement('p');
-               p.innerText = `
-                     added ${amount} from account: ${id}
-                      `
-               // console.log(p)
-               container.appendChild(p);
-
+              const divv=document.createElement('div');
+             divv.classList.add('mb-5');
+              divv.innerHTML=`
+              <h1 class="text-rose-700 font-semibold text-lg text-center">Add money</h1>
+              <p>${amount}$ added by ${bank}</p>
+              <h2>Account: ${id}</h2>
+              `
+              container.appendChild(divv)
 
 
             }
