@@ -1,6 +1,7 @@
 //default
  document.getElementById('cash-out').style.display='none';
   document.getElementById('cash-in').style.display='none';
+   document.getElementById('transaction').style.display='none';
 
 //for add money
 document.getElementById('add-money-box').addEventListener('click',
