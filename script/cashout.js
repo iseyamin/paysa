@@ -16,7 +16,7 @@ document.getElementById('cash-out-btn').addEventListener('click',
          return;
       }
 
-        if (amount && pin && accountNumber) {
+        if (amountt && pin && accountNumber) {
             if (accountNumber.length === 11) {
                 if (pinn === 1234) {
                     const sum = balancee - amountt;
