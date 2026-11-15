@@ -45,9 +45,10 @@ document.getElementById('add-money-btn').addEventListener('click',
       if (amount && pin && id) {
          if (id.length === 11) {
             if (pin === 1234) {
+               addtoLocal(amount, balance);                                                                   //new
                const sum = balance + amount;
                document.getElementById('main-balance').innerText = sum;
-
+              
 
                //add into transaction
                const container = document.getElementById('transactions');
@@ -72,3 +73,25 @@ document.getElementById('add-money-btn').addEventListener('click',
 )
 
 
+//local storage
+function availabletaka(){
+let taka='450';
+const taka2=localStorage.getItem('taka');
+if(taka2){
+   taka=taka2;
+}
+return taka;
+}
+//display available taka
+function displaytaka(){
+   const takaache=availabletaka();
+   document.getElementById('main-balance').innerText = takaache;
+}
+
+function addtoLocal(amount, balance) {
+   const sum2 = balance + amount;
+   localStorage.setItem('taka', sum2);
+}
+
+
+displaytaka()

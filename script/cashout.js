@@ -19,6 +19,7 @@ document.getElementById('cash-out-btn').addEventListener('click',
         if (amountt && pin && accountNumber) {
             if (accountNumber.length === 11) {
                 if (pinn === 1234) {
+                    addtoLocal2(amountt,balancee);                                          //new
                     const sum = balancee - amountt;
                     document.getElementById('main-balance').innerText = sum;
 
@@ -44,3 +45,13 @@ document.getElementById('cash-out-btn').addEventListener('click',
 
     }
 )
+
+
+
+
+//local storage
+
+function addtoLocal2(amount, balance) {
+   const sum2 = balance - amount;
+   localStorage.setItem('taka', sum2);
+}
